@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS products;
+CREATE TABLE products (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  description VARCHAR(250) NOT NULL,
+  cost INT(250) NOT NULL
+);
+
+DROP TABLE IF EXISTS categories;
+CREATE TABLE categories (
+	category_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(250) NOT NULL
+);
+
+DROP TABLE IF EXISTS category_product;
+CREATE TABLE category_product (
+	category_id BIGINT NOT NULL,
+	product_id BIGINT NOT NULL
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(256) NOT NULL,
+	password VARCHAR(256) NOT NULL
+);
